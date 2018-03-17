@@ -29,6 +29,13 @@ $(document).ready(function() {
 	brass.bb = brass.b - numGen(0,brass.b);
 	brass.bu = brass.u - numGen(0,brass.u);
 	
+	//Mouthpieces Needed
+	brass.mt = numGen(0,brass.tp);
+	brass.mh = numGen(0,brass.hp);
+	brass.mr = numGen(0,brass.rp);
+	brass.mb = numGen(0,brass.bp);
+	brass.mu = numGen(0,brass.up);
+	
 	//No Accessories
 	brass.p = brass.hp + brass.rp + brass.tp + brass.bp + brass.up;
 	brass.na = brass.p - numGen(0,brass.p - 1);
@@ -66,6 +73,23 @@ $(document).ready(function() {
 	$('body').append('<p>Your band has ' + brass.up + ' tuba players and ' + brass.u + ' available tubas. <i>' + brass.bu + ' of the school tubas are broken!</i></p>');
 	if ((brass.up - (brass.u - brass.bu)) > 0){
 		$('body').append('<p><span>You need to acquire or repair ' + (brass.up - (brass.u - brass.bu)) + ' tubas.</span></p>');
+	};
+	
+	$('body').append('<p>Some of your players can\'t afford mouthpieces. You need:</p>');
+	if (brass.mt > 0){
+		$('body').append('<p>' + brass.mt + 'trumpet mouthpieces</p>');
+	};
+	if (brass.mh > 0){
+		$('body').append('<p>' + brass.mh + 'horn mouthpieces</p>');
+	};
+	if (brass.mr > 0){
+		$('body').append('<p>' + brass.mr + 'trombone mouthpieces</p>');
+	};
+	if (brass.mb > 0){
+		$('body').append('<p>' + brass.mb + 'baritone mouthpieces</p>');
+	};
+	if (brass.mu > 0){
+		$('body').append('<p>' + brass.mu + 'tuba mouthpieces</p>');
 	};
 	
 	$('body').append('<br /><p>Also, <span>' + brass.na + ' of your students do not have valve oil.</span></p>');
