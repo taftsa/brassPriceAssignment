@@ -75,21 +75,21 @@ $(document).ready(function() {
 		$('body').append('<p><span>You need to acquire or repair ' + (brass.up - (brass.u - brass.bu)) + ' tubas.</span></p>');
 	};
 	
-	$('body').append('<p>Some of your players can\'t afford mouthpieces. You need:</p>');
+	$('body').append('<br /><p>Some of your players can\'t afford mouthpieces. You need:</p>');
 	if (brass.mt > 0){
-		$('body').append('<p>' + brass.mt + 'trumpet mouthpieces</p>');
+		$('body').append('<p><span>' + brass.mt + 'trumpet mouthpieces</span></p>');
 	};
 	if (brass.mh > 0){
-		$('body').append('<p>' + brass.mh + 'horn mouthpieces</p>');
+		$('body').append('<p><span>' + brass.mh + 'horn mouthpieces</span></p>');
 	};
 	if (brass.mr > 0){
-		$('body').append('<p>' + brass.mr + 'trombone mouthpieces</p>');
+		$('body').append('<p><span>' + brass.mr + ' trombone mouthpieces</span></p>');
 	};
 	if (brass.mb > 0){
-		$('body').append('<p>' + brass.mb + 'baritone mouthpieces</p>');
+		$('body').append('<p><span>' + brass.mb + ' baritone mouthpieces</span></p>');
 	};
 	if (brass.mu > 0){
-		$('body').append('<p>' + brass.mu + 'tuba mouthpieces</p>');
+		$('body').append('<p><span>' + brass.mu + 'tuba mouthpieces</span></p>');
 	};
 	
 	$('body').append('<br /><p>Also, <span>' + brass.na + ' of your students do not have valve oil.</span></p>');
