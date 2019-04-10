@@ -86,7 +86,7 @@ $(document).ready(function() {
 		$('body').append('<p><span>' + brass.mr + ' trombone mouthpieces</span></p>');
 	};
 	if (brass.mb > 0){
-		$('body').append('<p><span>' + brass.mb + ' baritone mouthpieces</span></p>');
+		$('body').append('<p><span>' + brass.mb + ' euphonium mouthpieces</span></p>');
 	};
 	if (brass.mu > 0){
 		$('body').append('<p><span>' + brass.mu + ' tuba mouthpieces</span></p>');
